@@ -1,0 +1,10 @@
+<!-- <span [style.text-decoration]="lineThrough">Item: {{ item }}</span> -->
+<label>Add an item: <input #newItem /></label>
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+<br />
+<div *ngIf="items.length">
+  <select #deleteItem>
+    <option *ngFor="let item of items" value="{{ item }}">{{ item }}</option>
+  </select>
+  <button (click)="delete(deleteItem.value)">Delete item</button>
+</div>

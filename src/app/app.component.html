@@ -1,0 +1,12 @@
+<h2>Input and Output together</h2>
+<p>Open the console to see the EventEmitter at work when you click Delete.</p>
+
+<app-input-output
+  (newItemEvent)="addItem($event)"
+  (deleteRequest)="deleteItem($event)"
+  [items]="items"
+></app-input-output>
+
+<ul>
+  <li *ngFor="let item of items">{{ item }}</li>
+</ul>
